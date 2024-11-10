@@ -1,4 +1,4 @@
-# RezkaScraper 
+# RezkaScraper
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://t.me/OFFpolice2069)
 
 RezkaScraper — это библиотека на Python для асинхронного поиска контента (аниме, фильмов, сериалов и мультфильмов) на сайте Rezka.ag.
