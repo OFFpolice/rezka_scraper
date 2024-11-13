@@ -1,1 +1,1 @@
-from .rezka_scraper import RezkaScraper
+from . test_rezka_scraper import RezkaScraper
