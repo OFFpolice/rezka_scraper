@@ -8,7 +8,7 @@ RezkaScraper — это библиотека на Python для асинхрон
 
 ## Установка:
 ```
-pip install rezka_scraper
+pip install rezka-scraper
 ```
 
 ## Пример использование:
@@ -17,26 +17,38 @@ import asyncio
 from rezka_scraper import RezkaScraper
 
 async def main():
-    scraper = RezkaScraper()
+    scraper = RezkaScraper()
 
-    # Поиск по названию
-    title, link = await scraper.search_rezka("Наруто")
-    if title:
-        print(f"Найдено: {title} - {link}")
-    else:
-        print("Ничего не найдено по запросу.")
+    # Поиск по названию
+    title, link = await scraper.search_rezka("Лицо со шрамом")
+    if title:
+        print(f"Найдено: {title} - {link}\n")
+    else:
+        print("Ничего не найдено по запросу.")
 
-    # Поиск аниме
-    anime_results = await scraper.search_anime(page=1)
-    print("Аниме на первой странице:")
-    for title, link in anime_results:
-        print(f"{title} - {link}")
+    # Поиск аниме
+    anime_results = await scraper.search_anime(page=1)
+    print("Аниме на первой странице:")
+    for title, link in anime_results:
+        print(f"{title} - {link}\n")
 
-    # Поиск фильмов
-    movies_results = await scraper.search_movies(page=1)
-    print("Фильмы на первой странице:")
-    for title, link in movies_results:
-        print(f"{title} - {link}")
+    # Поиск фильмов
+    movies_results = await scraper.search_movies(page=1)
+    print("Фильмы на первой странице:")
+    for title, link in movies_results:
+        print(f"{title} - {link}\n")
+
+    # Поиск сериалов
+    series_results = await scraper.search_series(page=1)
+    print("Сериалы на первой странице:")
+    for title, link in series_results:
+        print(f"{title} - {link}\n")
+
+    # Поиск мультфильмов
+    cartoons_results = await scraper.search_cartoons(page=1)
+    print("Мультфильмы на первой странице:")
+    for title, link in cartoons_results:
+        print(f"{title} - {link}\n")
 
 asyncio.run(main())
 ```
