@@ -2,11 +2,11 @@
 
 RezkaScraper — это библиотека на Python для асинхронного поиска контента (аниме, фильмов, сериалов и мультфильмов) на сайте [Rezka.ag](https://Rezka.ag).
 
-## Возможности:
+### Возможности:
 - Поиск по названию: Выполняет поиск по ключевому слову и возвращает первое совпадение.
 - Поиск по категориям: Поддержка категорий аниме, фильмы, сериалы, мультфильмы с пагинацией.
 
-## Установка:
+### Установка:
 ```
 pip install rezka-scraper
 ```
@@ -63,13 +63,13 @@ asyncio.run(main())
 | `search_series`    | Поиск сериалов с пагинацией (по умолчанию первая страница). |
 | `search_cartoons`  | Поиск мультфильмов с пагинацией (по умолчанию первая страница). |
 
-## Примечания:
+### Примечания:
 Для работы необходим стабильный интернет для выполнения запросов к сайту [Rezka.ag](https://Rezka.ag).
 
 Библиотека использует aiohttp для асинхронных HTTP-запросов и BeautifulSoup для парсинга HTML-контента.
 
-## Как связаться со мной:
+### Как связаться со мной:
 [![Telegram Badge](https://img.shields.io/badge/Contact-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/OFFpolice) [![Telegram Badge](https://img.shields.io/badge/Channel-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/OFFpolice2069) [![Twitter Badge](https://img.shields.io/twitter/follow/:OFFpolice2077)](https://x.com/OFFpolice2077) [![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/offpolice2077)
 
-## Лицензия:
+### Лицензия:
 Этот проект лицензируется по лицензии «MIT License» - более подробную информацию смотрите в файле [LICENSE](LICENSE).
