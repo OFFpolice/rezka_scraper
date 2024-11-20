@@ -11,7 +11,7 @@ RezkaScraper — это библиотека на Python для асинхрон
 pip install rezka-scraper
 ```
 
-## Пример использование:
+### Пример использование:
 ```
 import asyncio
 from rezka_scraper import RezkaScraper
@@ -53,7 +53,7 @@ async def main():
 asyncio.run(main())
 ```
 
-### Основные методы
+### Основные методы:
 
 | Метод              | Описание                                              |
 |---------------------|------------------------------------------------------|
