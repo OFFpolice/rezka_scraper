@@ -53,7 +53,6 @@ async def main():
 asyncio.run(main())
 ```
 
-
 ### Основные методы
 
 | Метод              | Описание                                              |
