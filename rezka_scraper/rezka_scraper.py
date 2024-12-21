@@ -15,26 +15,25 @@ class RezkaScraper:
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(search_url, headers=self.headers) as response:
-                    if response.status == 200:
-                        text = await response.text()
-                        soup = BeautifulSoup(text, "html.parser")
-                        results = soup.find_all("div", class_="b-content__inline_item")
-                        for result in results:
-                            title_tag = result.find("div", class_="b-content__inline_item-link").find("a")
-                            if title_tag:
-                                title = title_tag.text.strip()
-                                link = title_tag["href"]
-                                if name.lower() in title.lower():
-                                    return title, link
+                    if response.status != 200:
+                        raise Exception(f"HTTP ошибка: {response.status} при запросе: {search_url}\nСообщить об ошибке: https://t.me/OFFpolice")
+                    text = await response.text()
+                    soup = BeautifulSoup(text, "html.parser")
+                    results = soup.find_all("div", class_="b-content__inline_item")
+                    if not results:
                         return None, None
-                    else:
-                        print("Ошибка: Не удалось выполнить поиск. Код статуса:", response.status)
-                        return None, None
+                    for result in results:
+                        title_tag = result.find("div", class_="b-content__inline_item-link").find("a")
+                        if title_tag:
+                            title = title_tag.text.strip()
+                            link = title_tag["href"]
+                            if name.lower() in title.lower():
+                                return title, link
+                    return None, None
         except aiohttp.ClientError as e:
-            print("Ошибка соединения с сервером:", str(e))
+            raise Exception(f"Ошибка подключения: {e}\nСообщить об ошибке: https://t.me/OFFpolice")
         except Exception as e:
-            print("Произошла ошибка при обработке поиска:", str(e))
-        return None, None
+            raise Exception(f"Ошибка обработки данных: {e}\nСообщить об ошибке: https://t.me/OFFpolice")
 
     async def search_anime(self, page=1):
         return await self._search_category("animation", page)
@@ -53,23 +52,22 @@ class RezkaScraper:
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, headers=self.headers) as response:
-                    if response.status == 200:
-                        html = await response.text()
-                        soup = BeautifulSoup(html, "html.parser")
-                        results = soup.find_all("div", class_="b-content__inline_item")
-                        matches = []
-                        for result in results:
-                            title_tag = result.find("div", class_="b-content__inline_item-link").find("a")
-                            if title_tag:
-                                title = title_tag.text.strip()
-                                link = title_tag["href"]
-                                matches.append((title, link))
-                        return matches
-                    else:
-                        print("Ошибка: Не удалось загрузить категорию. Код статуса:", response.status)
+                    if response.status != 200:
+                        raise Exception(f"HTTP ошибка: {response.status} при запросе: {url}\nСообщить об ошибке: https://t.me/OFFpolice")
+                    html = await response.text()
+                    soup = BeautifulSoup(html, "html.parser")
+                    results = soup.find_all("div", class_="b-content__inline_item")
+                    if not results:
                         return None
+                    matches = []
+                    for result in results:
+                        title_tag = result.find("div", class_="b-content__inline_item-link").find("a")
+                        if title_tag:
+                            title = title_tag.text.strip()
+                            link = title_tag["href"]
+                            matches.append((title, link))
+                    return matches
         except aiohttp.ClientError as e:
-            print("Ошибка соединения с сервером:", str(e))
+            raise Exception(f"Ошибка подключения: {e}\nСообщить об ошибке: https://t.me/OFFpolice")
         except Exception as e:
-            print("Произошла ошибка при обработке категории:", str(e))
-        return None
+            raise Exception(f"Ошибка обработки данных: {e}\nСообщить об ошибке: https://t.me/OFFpolice")
