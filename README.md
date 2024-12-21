@@ -30,7 +30,7 @@ async def main():
         print(f"Ошибка при поиске по названию: {e}\n")
 
     try:
-        # Поиск аниме
+        # Поиск аниме с пагинацией
         anime_results = await scraper.search_anime(page=1)
         print("Аниме на первой странице:")
         for title, link in anime_results:
@@ -39,7 +39,7 @@ async def main():
         print(f"Ошибка при поиске аниме: {e}\n")
 
     try:
-        # Поиск фильмов
+        # Поиск фильмов с пагинацией
         movies_results = await scraper.search_movies(page=1)
         print("Фильмы на первой странице:")
         for title, link in movies_results:
@@ -48,7 +48,7 @@ async def main():
         print(f"Ошибка при поиске фильмов: {e}\n")
 
     try:
-        # Поиск сериалов
+        # Поиск сериалов с пагинацией
         series_results = await scraper.search_series(page=1)
         print("Сериалы на первой странице:")
         for title, link in series_results:
@@ -57,7 +57,7 @@ async def main():
         print(f"Ошибка при поиске сериалов: {e}\n")
 
     try:
-        # Поиск мультфильмов
+        # Поиск мультфильмов с пагинацией
         cartoons_results = await scraper.search_cartoons(page=1)
         print("Мультфильмы на первой странице:")
         for title, link in cartoons_results:
@@ -68,7 +68,7 @@ async def main():
 asyncio.run(main())
 ```
 
-## Основные методы:
+## Методы:
 
 | Метод              | Описание                                              |
 |---------------------|------------------------------------------------------|
@@ -84,7 +84,7 @@ asyncio.run(main())
 Библиотека использует aiohttp для асинхронных HTTP-запросов и BeautifulSoup для парсинга HTML-контента.
 
 ## Как связаться со мной:
-[![Telegram Badge](https://img.shields.io/badge/Contact-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/OFFpolice) [![Twitter Badge](https://img.shields.io/twitter/follow/:OFFpolice2077)](https://x.com/OFFpolice2077) [![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/offpolice2077)
+[![Telegram Badge](https://img.shields.io/badge/Contact-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/OFFpolice2077) [![Twitter Badge](https://img.shields.io/twitter/follow/:OFFpolice2077)](https://x.com/OFFpolice2077) [![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/offpolice2077)
 
 ## Лицензия:
 Этот проект лицензируется по лицензии «MIT License» - более подробную информацию смотрите в файле [LICENSE](LICENSE).
