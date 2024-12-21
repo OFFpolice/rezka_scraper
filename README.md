@@ -17,38 +17,53 @@ import asyncio
 from rezka_scraper import RezkaScraper
 
 async def main():
-    scraper = RezkaScraper()
+    scraper = RezkaScraper()
 
-    # Поиск по названию
-    title, link = await scraper.search_rezka("Лицо со шрамом")
-    if title:
-        print(f"Найдено: {title} - {link}\n")
-    else:
-        print("Ничего не найдено по запросу.")
+    try:
+        # Поиск по названию
+        title, link = await scraper.search_rezka("Лицо со шрамом")
+        if title:
+            print(f"Найдено: {title} - {link}\n")
+        else:
+            print("Ничего не найдено по запросу.\n")
+    except Exception as e:
+        print(f"Ошибка при поиске по названию: {e}\n")
 
-    # Поиск аниме
-    anime_results = await scraper.search_anime(page=1)
-    print("Аниме на первой странице:")
-    for title, link in anime_results:
-        print(f"{title} - {link}\n")
+    try:
+        # Поиск аниме
+        anime_results = await scraper.search_anime(page=1)
+        print("Аниме на первой странице:")
+        for title, link in anime_results:
+            print(f"{title} - {link}\n")
+    except Exception as e:
+        print(f"Ошибка при поиске аниме: {e}\n")
 
-    # Поиск фильмов
-    movies_results = await scraper.search_movies(page=1)
-    print("Фильмы на первой странице:")
-    for title, link in movies_results:
-        print(f"{title} - {link}\n")
+    try:
+        # Поиск фильмов
+        movies_results = await scraper.search_movies(page=1)
+        print("Фильмы на первой странице:")
+        for title, link in movies_results:
+            print(f"{title} - {link}\n")
+    except Exception as e:
+        print(f"Ошибка при поиске фильмов: {e}\n")
 
-    # Поиск сериалов
-    series_results = await scraper.search_series(page=1)
-    print("Сериалы на первой странице:")
-    for title, link in series_results:
-        print(f"{title} - {link}\n")
+    try:
+        # Поиск сериалов
+        series_results = await scraper.search_series(page=1)
+        print("Сериалы на первой странице:")
+        for title, link in series_results:
+            print(f"{title} - {link}\n")
+    except Exception as e:
+        print(f"Ошибка при поиске сериалов: {e}\n")
 
-    # Поиск мультфильмов
-    cartoons_results = await scraper.search_cartoons(page=1)
-    print("Мультфильмы на первой странице:")
-    for title, link in cartoons_results:
-        print(f"{title} - {link}\n")
+    try:
+        # Поиск мультфильмов
+        cartoons_results = await scraper.search_cartoons(page=1)
+        print("Мультфильмы на первой странице:")
+        for title, link in cartoons_results:
+            print(f"{title} - {link}\n")
+    except Exception as e:
+        print(f"Ошибка при поиске мультфильмов: {e}\n")
 
 asyncio.run(main())
 ```
