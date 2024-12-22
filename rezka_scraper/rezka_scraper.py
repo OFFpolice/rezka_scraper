@@ -1,7 +1,6 @@
 # rezka_scraper.py
 
 import aiohttp
-import random
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
