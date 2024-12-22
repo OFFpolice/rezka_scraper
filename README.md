@@ -80,11 +80,10 @@ asyncio.run(main())
 | `search_cartoons`  | Поиск мультфильмов с пагинацией (по умолчанию первая страница). |
 
 ## Примечания:
-**1. Асинхронный подход:** Для работы требуется поддержка асинхронного выполнения (asyncio).
-
-**2. Зависимости:** Библиотека использует aiohttp для HTTP-запросов и BeautifulSoup для парсинга HTML.
-
-**3. Стабильное подключение:** Для успешной работы требуется стабильный доступ к интернету.
+1. **Асинхронный подход:** Для работы требуется поддержка асинхронного выполнения (asyncio).
+2. **Зависимости:** Библиотека использует aiohttp для HTTP-запросов и BeautifulSoup для парсинга HTML.
+3. **Стабильное подключение:** Для успешной работы требуется стабильный доступ к интернету.
+4. **VPN:**
 
 ## Как связаться со мной:
 [![Telegram Badge](https://img.shields.io/badge/Contact-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/OFFpolice2077) [![Twitter Badge](https://img.shields.io/twitter/follow/:OFFpolice2077)](https://x.com/OFFpolice2077) [![Instagram Badge](https://img.shields.io/badge/-Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/offpolice2077)
