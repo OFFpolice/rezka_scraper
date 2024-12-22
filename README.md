@@ -81,7 +81,7 @@ asyncio.run(main())
 
 ## Примечания:
 1. **Асинхронный подход:** Для работы требуется поддержка асинхронного выполнения (asyncio).
-2. **Зависимости:** Библиотека использует [aiohttp](https://pypi.org/project/aiohttp/) для HTTP-запросов и [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) для парсинга HTML и fake-useragent для создания ненастоящего User-Agent.
+2. **Зависимости:** Библиотека использует [aiohttp](https://pypi.org/project/aiohttp/) для HTTP-запросов и [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) для парсинга HTML и [fake-useragent](https://pypi.org/project/fake-useragent/) для создания ненастоящего User-Agent.
 3. **Стабильное подключение:** Для успешной работы требуется стабильный доступ к интернету.
 4. **Возможные ограничения:** Сайт [Rezka.ag](https://Rezka.ag) может быть недоступен в некоторых регионах. В этом случае вам может понадобиться использование VPN.
 
