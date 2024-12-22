@@ -13,6 +13,7 @@ setup(
     install_requires=[
         'aiohttp',
         'beautifulsoup4',
+        'fake-useragent',
     ],
     python_requires='>=3.8',
     description='RezkaScraper — это мини библиотека на Python для асинхронного поиска контента (аниме, фильмов, сериалов и мультфильмов) на сайте Rezka.ag',
