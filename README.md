@@ -22,9 +22,9 @@ async def main():
 
     try:
         # Поиск по названию
-        title, link = await scraper.search_rezka("Лицо со шрамом")
+        title, link, image_url = await scraper.search_rezka("Лицо со шрамом", images=True)
         if title:
-            print(f"Найдено: {title} - {link}\n")
+            print(f"Найдено: {title} - {link}\nОбложка: {image_url}\n")
         else:
             print("Ничего не найдено по запросу.\n")
     except Exception as e:
