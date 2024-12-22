@@ -31,7 +31,7 @@ async def main():
         print(f"Ошибка при поиске по названию: {e}\n")
 
     try:
-        # Поиск аниме с пагинацией
+        # Поиск аниме с пагинацией (по умолчанию первая страница)
         anime_results = await scraper.search_anime(page=1)
         print("Аниме на первой странице:")
         for title, link in anime_results:
@@ -40,7 +40,7 @@ async def main():
         print(f"Ошибка при поиске аниме: {e}\n")
 
     try:
-        # Поиск фильмов с пагинацией
+        # Поиск фильмов с пагинацией (по умолчанию первая страница)
         movies_results = await scraper.search_movies(page=1)
         print("Фильмы на первой странице:")
         for title, link in movies_results:
@@ -49,7 +49,7 @@ async def main():
         print(f"Ошибка при поиске фильмов: {e}\n")
 
     try:
-        # Поиск сериалов с пагинацией
+        # Поиск сериалов с пагинацией (по умолчанию первая страница)
         series_results = await scraper.search_series(page=1)
         print("Сериалы на первой странице:")
         for title, link in series_results:
@@ -58,7 +58,7 @@ async def main():
         print(f"Ошибка при поиске сериалов: {e}\n")
 
     try:
-        # Поиск мультфильмов с пагинацией
+        # Поиск мультфильмов с пагинацией (по умолчанию первая страница)
         cartoons_results = await scraper.search_cartoons(page=1)
         print("Мультфильмы на первой странице:")
         for title, link in cartoons_results:
