@@ -21,10 +21,22 @@ async def main():
     scraper = RezkaScraper()
 
     try:
+        # Пример с обложкой!
         # Поиск по названию параметр images=True передан в метод search_rezka, он дополнительно вернет ссылку на обложку контента. Если обложка не нужна установите images=False.
-        title, link, image_url = await scraper.search_rezka("Лицо со шрамом", images=True)
+        title, link, image_url = await scraper.search_rezka("Рик и морти", images=True)
         if title:
-            print(f"Найдено: {title} - {link}\nОбложка: {image_url}\n")
+            print(f"Найдено: {title}\nСсылка: {link}\nОбложка: {image_url}\n")
+        else:
+            print("Ничего не найдено по запросу.\n")
+    except Exception as e:
+        print(f"Ошибка при поиске по названию: {e}\n")
+
+    try:
+        # Пример без обложки!
+        # Поиск по названию параметр images=True передан в метод search_rezka, он дополнительно вернет ссылку на обложку контента. Если обложка не нужна установите images=False.
+        title, link = await scraper.search_rezka("Рик и морти", images=False)
+        if title:
+            print(f"Найдено: {title}\nСсылка: {link}\n")
         else:
             print("Ничего не найдено по запросу.\n")
     except Exception as e:
