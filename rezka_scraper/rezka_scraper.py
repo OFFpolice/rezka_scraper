@@ -4,6 +4,7 @@ import aiohttp
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
+
 class RezkaScraper:
     def __init__(self):
         self.base_url = "https://rezka.ag"
@@ -41,6 +42,7 @@ class RezkaScraper:
         except Exception as e:
             raise Exception(f"Ошибка обработки данных: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice2077")
 
+
     async def search_anime(self, page=1):
         return await self._search_category("animation", page)
 
@@ -52,6 +54,7 @@ class RezkaScraper:
 
     async def search_cartoons(self, page=1):
         return await self._search_category("cartoons", page)
+
 
     async def _search_category(self, category, page):
         url = f"{self.base_url}/{category}/page/{page}/"
