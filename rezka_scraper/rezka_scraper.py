@@ -12,6 +12,7 @@ class RezkaScraper:
     def _get_headers(self):
         return {"User-Agent": self.agent.random}
 
+
     async def search_rezka(self, name, images=False):
         search_url = f"{self.base_url}/search/?do=search&subaction=search&q={name}"
         try:
