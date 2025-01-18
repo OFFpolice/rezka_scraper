@@ -10,10 +10,10 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='rezka_scraper',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[
-        'aiohttp==3.11.11',
+        'aiohttp==3.8.6',
         'beautifulsoup4==4.12.3',
         'fake-useragent==2.0.3',
     ],
