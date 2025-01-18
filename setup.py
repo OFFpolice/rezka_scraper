@@ -10,7 +10,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='rezka_scraper',
-    version='0.0.8',
+    version='0.0.9',
     packages=find_packages(),
     install_requires=[
         'aiohttp',
