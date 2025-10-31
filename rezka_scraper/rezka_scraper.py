@@ -39,9 +39,9 @@ class RezkaScraper:
                             return (title, link, image_url) if images else (title, link)
                     return (None, None, None) if images else (None, None)
         except aiohttp.ClientError as e:
-            raise Exception(f"Ошибка подключения: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice2077")
+            raise Exception(f"Ошибка подключения: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice")
         except Exception as e:
-            raise Exception(f"Ошибка обработки данных: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice2077")
+            raise Exception(f"Ошибка обработки данных: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice")
 
 
     async def search_anime(self, page=1):
@@ -78,6 +78,6 @@ class RezkaScraper:
                             matches.append((title, link))
                     return matches
         except aiohttp.ClientError as e:
-            raise Exception(f"Ошибка подключения: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice2077")
+            raise Exception(f"Ошибка подключения: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice")
         except Exception as e:
-            raise Exception(f"Ошибка обработки данных: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice2077")
+            raise Exception(f"Ошибка обработки данных: {e}\n\nСообщить об ошибке: https://t.me/OFFpolice")
